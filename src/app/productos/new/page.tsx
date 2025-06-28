@@ -15,7 +15,7 @@ export default function CrearProducto() {
   const [form, setForm] = useState({ nomPro: '', precioProducto: '', stockProducto: '' });
 
   // Maneja el envío del formulario
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Evita que se recargue la página al enviar el formulario
 
     // Crea el producto llamando a la función de la API (conversión de tipos incluida)

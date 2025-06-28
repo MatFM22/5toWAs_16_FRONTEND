@@ -21,7 +21,6 @@ export default function ProductosPage() {
   };
 
   // Función para eliminar un producto por su código
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const eliminarProducto = async (codProducto: number) => {
     const confirmar = confirm('¿Estás seguro de eliminar este producto?');
     if (!confirmar) return;
