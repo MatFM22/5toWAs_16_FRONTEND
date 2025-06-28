@@ -6,7 +6,14 @@ import { useRouter } from 'next/navigation'; // Hook para navegación programát
 
 export default function ProductosPage() {
   // Estado para almacenar la lista de productos
-  const [productos, setProductos] = useState([]);
+    type Producto = {
+    codProducto: number;
+    nomPro: string;
+    precioProducto: number;
+    stockProducto: number;
+  };
+
+  const [productos, setProductos] = useState<Producto[]>([]);
   const router = useRouter(); // Permite redirigir a otras rutas
 
   // Función para obtener productos del backend
@@ -101,7 +108,7 @@ export default function ProductosPage() {
           {/* Mensaje si no hay productos */}
           {productos.length === 0 && (
             <tr>
-              <td colSpan="5" className="p-4 text-center">
+              <td colSpan={5} className="p-4 text-center">
                 No hay productos disponibles.
               </td>
             </tr>
