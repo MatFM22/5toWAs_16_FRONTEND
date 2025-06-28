@@ -24,7 +24,7 @@ export default function EditarProducto() {
   }, [codProducto]);
 
   // Función que se ejecuta al enviar el formulario
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Previene el comportamiento por defecto del form (recarga)
 
     // Envía los datos actualizados al backend
